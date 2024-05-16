@@ -9,8 +9,8 @@ public class Cube : Shape
 
     public void Move()
     {
-        Debug.Log("pos Z: " + transform.position.z);
         this.GetComponent<Rigidbody>().mass = 10;
+
         if (transform.position.z < boundZ)
         {
             this.GetComponent<Rigidbody>().AddForce(Vector3.forward, ForceMode.Impulse);
